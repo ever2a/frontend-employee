@@ -1,1 +1,54 @@
-<p>login works!</p>
+<body>
+    <div class="container">
+      <div class="hero-card">
+        <h1>PLANKTONS</h1>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
+          saepe molestias recusandae possimus sed iure, delectus facere libero
+          rerum! Sed ex nesciunt alias quae eos obcaecati voluptatibus facilis
+          maiores fugiat.
+        </p>
+      </div>
+      <div class="login-box">
+        <header class="login-header">
+          <h1>Member Login</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </header>
+        <main class="login">
+          <form action="#">
+            <div>
+              <input
+                type="text"
+                id="username"
+                [(ngModel)]="loginObj.username"
+                name="username"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                id="password"
+                [(ngModel)]="loginObj.password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="form-button"
+              (click)="login()"
+            >
+              Login
+            </button>
+          </form>
+        </main>
+        <footer class="signup-footer">
+          <p><a href="#">Don't have an account?</a></p>
+        </footer>
+      </div>
+    </div>
+  </body>

@@ -1,1 +1,90 @@
-<p>employee works!</p>
+<div class="tab-pane fade show active" id="employee" role="tabpanel" aria-labelledby="employee-tab">
+    <div class="row">
+        <div class="col-6">
+            <h2>Employee</h2>
+        </div>
+        <div class="col-6 text-end">
+            <button class="btn btn-success" (click)="isFormVisible.set(true)">Add New</button>
+        </div>
+    </div>
+
+    <!-- Employee Form -->
+    @if (isFormVisible()) {
+        <form class="mb-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="employeeName" class="form-label">Employee Name</label>
+                    <input type="text" class="form-control" id="employeeName" placeholder="Enter Employee Name">
+                </div>
+                <div class="col-md-6">
+                    <label for="contactNo" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contactNo" placeholder="Enter Contact Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="emailId" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailId" placeholder="Enter Email">
+                </div>
+                <div class="col-md-4">
+                    <label for="deptId" class="form-label">Parent Department</label>
+                    <select class="form-select" id="deptId">
+                        <option selected>Select Department</option>
+                        <!-- Add Department -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="deptId" class="form-label">Child Department</label>
+                    <select class="form-select" id="deptId">
+                        <option selected>Select Department</option>
+                        <!-- Add Department -->
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+                <div class="col-md-6">
+                    <label for="role" class="form-label">Role</label>
+                    <input type="text" class="form-control" id="role" placeholder="Enter Role">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-select" id="gender">
+                        <option selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-3">Submit</button>
+            <button class="btn btn-danger mt-3" (click)="isFormVisible.set(false)">Close</button>
+        </form>
+    }
+
+
+
+    <!-- Employee Table -->
+    <h3>Employee List</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Name</th>
+                <th>Contact N°</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Role</th>
+                <th>Gender</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows go here -->
+        </tbody>
+    </table>
+</div>
